@@ -1,17 +1,54 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
+import Granim from "granim";
+import HeaderPart from "./Components/HeaderPart";
+import Body from "./Components/Body";
 
 function App() {
+  useEffect(() => {
+    const newGranimInstance = new Granim({
+      element: "#canvas-basic",
+      // direction: 'radial',
+      direction: 'diagonal',
+      isPausedWhenNotInView: true,
+      opacity: [1, 1],
+      states: {
+        "default-state": {
+          gradients: [
+            [
+              { color: "#1f1f1f", pos: 0.2 },
+              { color: "#3d7ba8", pos: 0.8 },
+              { color: "#1f1f1f", pos: 1 },
+            ],
+            // [
+            //   { color: "#1f1f1f", pos: 0.2 },
+            //   { color: "#1f1f1f", pos: 0.8 },
+            //   { color: "#1f1f1f", pos: 1 },
+            // ],
+            [
+              { color: "#1f1f1f", pos: 0 },
+              { color: "#5e2975", pos: 0.2 },
+              { color: "#1f1f1f", pos: 0.75 },
+            ],
+            [
+              { color: "#1f1f1f", pos: 0.2 },
+              { color: "#1f1f1f", pos: 0.8 },
+              { color: "#1f1f1f", pos: 1 },
+            ],
+          ],
+          transitionSpeed: 5000,
+        },
+      },
+    });
+  }, []);
+
+
   return (
-    <div className="bg-slate-900 w-full h-full">
-      <div
-        className="w-full h-full"
-        style={{
-          background:
-            " radial-gradient(circle, rgba(139,213,224,0.7) 0%, rgba(159,111,246,0.7133053050321692) 14%, rgba(34,34,34,0.7) 100%)",
-        }}
-      >
-        Hlleo
+    <div className="main-comp bg-slate-900 w-full  relative">
+      <canvas id="canvas-basic" className=""  />
+      <div className="table-comp">
+      <HeaderPart/>
+      <Body/>
       </div>
     </div>
   );
