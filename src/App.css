@@ -27,3 +27,13 @@
   background-size: contain;
   
 }
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: '#D175B6';
+  border-radius: 14px;
+}
