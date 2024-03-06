@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import "./App.css";
 import Granim from "granim";
 import HeaderPart from "./Components/HeaderPart";
@@ -6,7 +6,7 @@ import Body from "./Components/Body";
 
 function App() {
   useEffect(() => {
-    const newGranimInstance = new Granim({
+    new Granim({
       element: "#canvas-basic",
       // direction: 'radial',
       direction: 'diagonal',
@@ -16,7 +16,7 @@ function App() {
         "default-state": {
           gradients: [
             [
-              { color: "#1f1f1f", pos: 0.2 },
+              { color: "#000000", pos: 0.2 },
               { color: "#3d7ba8", pos: 0.8 },
               { color: "#1f1f1f", pos: 1 },
             ],
@@ -33,7 +33,7 @@ function App() {
             [
               { color: "#1f1f1f", pos: 0.2 },
               { color: "#1f1f1f", pos: 0.8 },
-              { color: "#1f1f1f", pos: 1 },
+              { color: "#000000", pos: 1 },
             ],
           ],
           transitionSpeed: 5000,

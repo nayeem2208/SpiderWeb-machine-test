@@ -1,12 +1,11 @@
-import React from 'react'
 import SideBar from './SideBar'
-import EventNames from './EventNames'
+import Router from '../Router/Router'
 
 function Body() {
   return (
-    <div className='flex mx-12 mt-12'>
+    <div className='flex mx-12 mt-12 '>
       <SideBar/>
-      <EventNames/>
+      <Router/>
     </div>
   )
 }

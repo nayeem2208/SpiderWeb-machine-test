@@ -1,4 +1,3 @@
-import React from "react";
 import { GrStatusInfo } from "react-icons/gr";
 import image from "../../public/Notificsation.png";
 import userImage from "../../public/Ellipse 2.png";
@@ -6,9 +5,9 @@ import userImage from "../../public/Ellipse 2.png";
 function HeaderPart() {
   return (
     <div className="flex justify-center text-center ">
-      <div className="flex mt-12">
+      <div className="flex mt-6">
         <GrStatusInfo className="text-white w-6 h-6 mt-4" />
-        <img src={image} alt="" className="w-7 h-7 mt-4 mx-4" />
+        <img src={image} alt="" className="w-7 h-6 mt-4 mx-4" />
         <h1 className="text-white text-left text-semibold mt-1">
           Hi,<span style={{ color: "#03ffd5" }}>Muhammed Asad</span>
           <br />
