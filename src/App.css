@@ -1,13 +1,13 @@
 .main-comp {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 160vh;
 }
 
 .main-comp canvas,
 .main-comp .table-comp {
   width: 100%;
-  height: 100vh;
+  height: 160vh;
 }
 
 #canvas-basic {
