@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import starImage from "../../../public/Star_2-removebg-preview.png";
 
 function MeetinRoomCard(prop) {
@@ -12,8 +12,20 @@ function MeetinRoomCard(prop) {
     setIsHovered(false);
   };
 
-  const textColor = prop.num === 1 ? "text-black" : isHovered ? "text-black" : "text-customPurple";
-  const bgColor = prop.num === 1 ? "bg-customPurple" : isHovered ? "bg-customPurple" : "";
+  const textColor =
+    prop.num === 1
+      ? "text-black"
+      : isHovered
+      ? "text-black"
+      : "text-customPurple";
+  const bgColor =
+    prop.num === 1 ? "bg-customPurple" : isHovered ? "bg-customPurple" : "";
+  const starFilter =
+    prop.num === 1
+      ? "drop-shadow(2px 2px 4px rgba(0, 0, 0, 1))"
+      : isHovered
+      ? "drop-shadow(2px 2px 4px rgba(0, 0, 0, 1))"
+      : "drop-shadow(2px 2px 4px rgba(220, 69, 247, 1))";
 
   return (
     <div
@@ -28,8 +40,8 @@ function MeetinRoomCard(prop) {
         </h1>
         <img
           src={starImage}
-          className="w-4 h-4 mt-1 mx-2"
-          style={{ filter: "drop-shadow(2px 2px 4px rgba(220, 69, 247, 1))" }}
+          className={`w-4 h-4 mt-1 mx-2 `}
+          style={{ filter: starFilter }}
           alt=""
         />
         <span className={`font-semibold ${textColor}`}>12 Positions</span>
